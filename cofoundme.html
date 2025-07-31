@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CoFound.me</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+                position: relative;
+                height: auto;
+                max-height: 100%;
+            }
+            video.mainpage {
+                width: 100%;
+                height: 950px;
+                object-fit: cover; 
+                filter:brightness(85%)
+            }
+            img.logo {
+                position: absolute;
+                height: 95px;
+                top: 8px;
+            }
+            img.name {
+                height: 300px;
+                position: absolute;
+                top: 21px;
+                left: 62px;
+            }
+            h1.frase_1 {
+                position: absolute;
+                top: 120px;
+                color: #fdf7eb;
+                font-family: Montserrat;
+                font-size:45px;
+                width: 1150px;
+                text-align: center;
+                font-weight: 700;
+            }
+            h2.frase_2 {
+                color: #fdf7eb;
+                position: absolute;
+                top:620px;
+                font-family: Montserrat;
+                font-size: 30px;
+                width: 800px;
+                text-align: center;
+                font-weight: 500;
+            }
+            div.maintext {
+                display:flex;
+                justify-content: center;
+            }
+            div.main_buttons {
+                position: absolute;
+                top: 8px;
+                right: 25px;
+            }
+            .iniciar {
+                width: 280px;
+            }
+            .criar {
+                width: 280px;
+            }
+
+            .find {
+                position: absolute;
+                top: 725px;
+                right: 50%;
+                height: 290px;
+                translate: 50%;    
+            }
+            .find:hover {
+                transform: scale(0.94);
+                transition: 0.3s;
+            }
+
+            .grad_1 {
+                background: linear-gradient(90deg, #ff7e5f, #feb47b);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                color: transparent;
+            }
+            .grad_2 {
+                background: linear-gradient(90deg, #2A9B93, #2988D6);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                color: transparent;
+            }
+            .grad_3 {
+                background: linear-gradient(90deg, #C98D00, #D629BF);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                color: transparent;
+                font-size: 80 !important;
+            }
+
+            .section_2 {
+                position: absolute;
+                top:950px;
+                background-color: #332d56;
+                width: 100%;
+                height:950px;
+                z-index: 0;
+            }
+
+            .change {
+                position: absolute;
+                width:1100px;
+                display: flex;
+                justify-content: center;
+                top: 940px;
+                font-size: 50px;
+                font-family: Montserrat;
+                font-weight: 700;
+                color: #fdf7eb;
+                z-index: 5;
+                right:50%;
+                translate: 50%;
+            }
+
+            .firsty {
+                padding: 15px;
+                position: absolute;
+                border-radius: 20px;
+                top: 1120px;
+                background: #f04abb;
+                background: linear-gradient(90deg, rgba(240, 74, 187, 1) 0%, rgba(240, 162, 120, 1) 90%);
+                width: 310px;
+                height: 310px;
+                left: 15%;
+                font-family: Montserrat;
+                font-size: 26px;
+                color: #fdf7eb;
+                font-weight: 650;
+                display: flex;
+                align-items: center;
+                text-align: center;
+            }
+            .firsty:hover {
+                transform: scale(0.9);
+                transition: 0.6s;
+            }
+
+            .secondy{
+                padding: 15px;
+                position: absolute;
+                border-radius: 20px;
+                top: 1120px;
+                background: #F0A278;
+                background: linear-gradient(90deg,rgba(240, 162, 120, 1) 0%, rgba(240, 38, 65, 1) 90%);
+                width: 310px;
+                height: 310px;
+                left: 50%;
+                translate: -50%;
+                font-family: Montserrat;
+                font-size: 26px;
+                color: #fdf7eb;
+                font-weight: 650;
+                display: flex;
+                align-items: center;
+                text-align: center;
+            }
+            .secondy:hover {
+                transform: scale(0.9);
+                transition: 0.6s;
+            }
+
+            .thirdy {
+                padding: 15px;
+                position: absolute;
+                border-radius: 20px;
+                top: 1120px;
+                background: #F02641;
+                background: linear-gradient(90deg, rgba(240, 38, 65, 1) 0%, rgba(68, 157, 199, 1) 50%);
+                width: 310px;
+                height: 310px;
+                right: 15%;
+                font-family: Montserrat;
+                font-size: 26px;
+                color: #fdf7eb;
+                font-weight: 650;
+                display: flex;
+                align-items: center;
+                text-align: center;
+            }
+            .thirdy:hover {
+                transform: scale(0.9);
+                transition: 0.6s;
+            }
+
+            .hang_on {
+                position: absolute;
+                width:1100px;
+                display: flex;
+                justify-content: center;
+                top: 1470px;
+                font-size: 50px;
+                font-family: Montserrat;
+                font-weight: 900;
+                color: #fdf7eb;
+                z-index: 5;
+                right:50%;
+                translate: 50%;
+                z-index: 103;
+            }
+
+            .team {
+                position: absolute;
+                left: 167px;
+                top: 1629px;
+                z-index: 3;
+                width: 766px;
+                height: 431px;
+                object-fit: cover;
+                left: 50%;
+                translate: -50%;
+                z-index: 102;
+                border-radius: 4px;;
+            }
+            .window {
+                position: absolute;
+                left: 50%;
+                translate: -50%;
+                top: 1540px;
+                z-index: 101;
+                width: 900px;
+            }
+
+            .section_3 {
+                position: absolute;
+                top: 1780px;
+                width: 100%;
+                height: 850px;
+                background: #F04ABB;
+                background: linear-gradient(90deg, rgba(240, 74, 187, 1) 0%, rgba(240, 162, 120, 1) 50%, rgba(240, 38, 65, 1) 100%);
+                z-index: 100;
+            }
+
+            .info {
+                font-family: Montserrat;
+                font-weight: 300;
+                color:#fdf7eb;
+                font-size: 10px;
+                position: absolute;
+                top: 1755px;
+                left: 10px;
+            }
+            
+            .um {
+                position: absolute;
+                top: 2160px;
+                left: 1%;
+                z-index: 130;
+                object-fit: cover;
+                height: 110px;
+            }
+            
+            .dois {
+                position: absolute;
+                top: 2300px;
+                left: 1%;
+                z-index: 130;
+                object-fit: cover;
+                height: 110px;
+            }
+
+            .tres {
+                position: absolute;
+                top: 2440px;
+                left: 1%;
+                z-index: 130;
+                object-fit: cover;
+                height: 110px;
+            }
+            
+            .what {
+                font-family: Montserrat;
+                font-size: 55px;
+                font-weight: 800;
+                color:#fdf7eb;
+                position: absolute;
+                top: 2030px;
+                left: 2.5%;
+                z-index: 130;
+            }
+
+            .text_1 {
+                font-family: Montserrat;
+                font-weight: 550;
+                font-size: 35px;
+                color:#fdf7eb;
+                position: absolute;
+                top: 2156px;
+                left: 166px;
+                z-index: 140;
+            }
+
+            .text_2 {
+                font-family: Montserrat;
+                font-weight: 550;
+                font-size: 35px;
+                color:#fdf7eb;
+                position: absolute;
+                top: 2296px;
+                left: 166px;
+                z-index: 140;
+            }
+            .text_3 {
+                font-family: Montserrat;
+                font-weight: 550;
+                font-size: 35px;
+                color:#fdf7eb;
+                position: absolute;
+                top: 2436px;
+                left: 166px;
+                z-index: 140;
+            }
+
+            .section_4 {
+                width: 100%; 
+                background-color: #332d56;
+                height: 340px;
+                position: absolute;
+                top: 2620px;
+            }
+            
+            .footer {
+                position: absolute;
+                top: 2630px;
+                width: 130px;
+            }
+
+            .conexão {
+                font-family: Montserrat;
+                font-size: 30px;
+                color:#fdf7eb;
+                font-weight: 800;
+                position: absolute;
+                top: 2700px;
+                left: 50%;
+                translate: -50%;
+                text-align: center;
+            }
+
+            .in {
+                position: absolute;
+                top: 2780px;
+                width: 60px;
+                left: 45%;
+            }
+            .in:hover {
+                transform: scale(0.9);
+                transition: 0.5s;
+            }
+
+            .il {
+                position: absolute;
+                top: 2780px;
+                width: 90px;
+                right: 45%;
+            }
+            .il:hover {
+                transform: scale(0.9);
+                transition: 0.5s;
+            }
+
+            .info_end {
+                font-family: Montserrat;
+                font-weight: 400;
+                color:#fdf7eb;
+                font-size: 15px;
+                position: absolute;
+                top: 2920px;
+                left: 10px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <video class="mainpage" src="images_web/desk.mp4" autoplay loop></video>
+        <div class>
+            <img class="logo" src="images_web/logo.png" alt="image">
+            <img class="name" src="images_web/nome.png" alt="">
+        </div>
+        <div class="maintext">
+            <h1 class="frase_1">E se fosse possível unir as <span class="grad_1">tuas</span> ideias com as dos <span class="grad_2">outros?</span></h1>
+            <h2 class="frase_2"><strong>Roma não foi construída num dia, mas a tua equipa pode ser encontrada com um <span class="grad_3">click!</span></strong></h2>
+        </div>
+        <div class="main_buttons">
+            <img class="iniciar" src="images_web/inicia.png"">
+            <img class="criar" src="images_web/cria.png" alt="">
+        </div>
+        <div>
+            <a href="#discover_more">
+                <img class="find" src="images_web/discover.png" alt="">
+            </a>
+        </div>
+
+        <div id="discover_more" class="section_2"></div>
+        <p class="change">Torna-te parte da mudança...</p>
+        <div class="firsty">O ecossistema nacional de startups cresceu 27% entre 2022 e 2024.</div>
+        <div class="secondy">Cerca de 57% de todos os produtos e serviços provenientes de startups são exportados.</div>
+        <div class="thirdy">O salário médio numa startup nacional é de 2 000 €.</div>
+        <p class="hang_on">Imagina.Partilha.Cria.</p>
+        <img class="team" src="images_web/team.png" alt="">
+        <img class="window" src="images_web/windo.png" alt="">
+        <img class="window_2" src="images_web/windo.png" alt="">
+        <p class="info">*Informação retirada do  Startup & Entrepreneurial Ecosystem Report 2024.</p>
+        
+        <div class="section_3"></div>
+        <img class="um" src="images_web/one.png" alt="">
+        <img class="dois" src="images_web/two.png" alt="">
+        <img class="tres" src="images_web/three.png" alt="">
+        <p class="what" >O que fazer?</p>
+        <p class="text_1">Cria conta na CoFound.me de forma totalmente gratuita &#59;)</p>
+        <p class="text_2">Cria ou procura uma oportunidade que represente as tuas ideias :)&#41;</p>
+        <p class="text_3">Comunica com outros fundadores, torna-te parte desta comunidade :D</p>
+
+        <div class="section_4"></div>
+        <div class = "footer">
+            <img class="logo" src="images_web/logo.png" alt="image">
+            <img class="name" src="images_web/nome.png" alt="">
+        </div>
+        <p class="conexão">Connecta-te connosco</p>
+        <a href="https://www.linkedin.com/company/cofound-me-pt/ ">
+            <img class="in" src="images_web/linkedin.png" alt="">
+        </a>
+        <a href="mailto:cofound.mept@gmail.com">
+            <img class="il" src="images_web/email.png" alt="">
+        </a>
+        <p class="info_end">© 2025 CoFound.me . Todos os direitos reservados. Criado por Ricardo Ferreira.</p>
+    </body>
+</html>
